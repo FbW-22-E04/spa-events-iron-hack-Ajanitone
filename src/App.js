@@ -10,16 +10,14 @@ function App() {
   };
   const clickHandler = () => {
     if (details.clickCount % 5 === 0) {
-      setDetails((prev) => ({
-        ...prev,
+      setDetails(() => ({
         backColor: colorMapper(),
         clickCount: details.clickCount + 1,
       }));
 
       return;
     }
-    setDetails((prev) => ({
-      ...prev,
+    setDetails(() => ({
       clickCount: details.clickCount + 1,
     }));
   };
